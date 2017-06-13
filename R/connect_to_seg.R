@@ -1,0 +1,19 @@
+# Hello, world!
+#
+# This is an example function named 'hello'
+# which prints 'Hello, world!'.
+#
+# You can learn more about package authoring with RStudio at:
+#
+#   http://r-pkgs.had.co.nz/
+#
+# Some useful keyboard shortcuts for package authoring:
+#
+#   Build and Reload Package:  'Cmd + Shift + B'
+#   Check Package:             'Cmd + Shift + E'
+#   Test Package:              'Cmd + Shift + T'
+require(RPostgreSQL)
+connect_to_seg <- function() {
+  con_seg <-  dbConnect(PostgreSQL(), dbname='analytics', host = "veritas.c3byxptpwzdt.us-east-1.redshift.amazonaws.com", port=5439, user = "mypizza", password = "ji9P329nso9u3joinfcjd034")
+  con_seg
+}
